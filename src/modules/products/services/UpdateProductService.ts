@@ -10,6 +10,9 @@ interface IUpdateProduct{
 }
 
 export default class UpdateProductService{
+    static execute(arg0: { id: string; name: any; price: any; quantity: any; }) {
+        throw new Error("Method not implemented.");
+    }
     async execute({ id, name, price, quantity }: IUpdateProduct): Promise<Product>{
         const product = await productsRepositories.findById(id);
 
