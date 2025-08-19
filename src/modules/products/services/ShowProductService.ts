@@ -7,16 +7,12 @@ interface IShowProduct{
 }
 
 export default class ShowProductService {
-    static execute(arg0: { id: string; }) {
-        throw new Error("Method not implemented.");
-    }
-    async execute ({ id} : IShowProduct): Promise<Product>{
-        const product = await productsRepositories.findById(id)
+    async execute ( {id} :IShowProduct): Promise<Product> {
+        const product = await productsRepositories.findById(id);
 
-        if(!product){
+        if (!product) {
             throw new AppError('Product not found', 404)
         }
-
         return product;
     }
 }
