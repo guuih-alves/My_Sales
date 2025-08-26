@@ -7,3 +7,6 @@ temp/
 coverage
 ormconfig.josn
 dist
+
+uploads/*
+!uploads/.gitkeep
