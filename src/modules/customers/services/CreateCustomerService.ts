@@ -25,4 +25,7 @@ class CreateCustomerService {
 
         return customer;
     }
+
 }
+
+export default CreateCustomerService;
